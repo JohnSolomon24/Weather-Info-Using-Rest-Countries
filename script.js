@@ -4,7 +4,7 @@
 
 
 
-let res = fetch("https://restcountries.com/v2/all");
+let res = fetch("https://restcountries.com/v3/all?fields=flags,name,capital,region,subregion,alpha3Code");
 
 
 res.then((data)=>data.json()).then((data1)=>{
@@ -262,7 +262,7 @@ p11.innerHTML="Close";
 
 
 
-        h5.innerHTML = `${data1[i].name}`
+        h5.innerHTML = `${data1[i].name.common}`
         if(data1[i].capital)
         {
             h4.innerHTML=`Capital : ${data1[i].capital}`
